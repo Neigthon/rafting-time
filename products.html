@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Products | Timeless Elegance Emporium</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Open+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Libre Baskerville', serif;
+        }
+        .product-card:hover .product-overlay {
+            opacity: 1;
+        }
+        .nav-link::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 1px;
+            background: currentColor;
+            transition: width .3s;
+        }
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        .filter-btn.active {
+            background-color: #1f2937;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white bg-opacity-90 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold" style="font-family: 'Libre Baskerville', serif;">Timeless Elegance</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="products.html" class="nav-link font-bold">Products</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <i data-feather="menu"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Header -->
+    <section class="pt-32 pb-16 px-6 bg-gray-50">
+        <div class="container mx-auto">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-bold mb-4">Our Collection</h1>
+                <p class="max-w-2xl mx-auto">Discover our carefully curated selection of timeless pieces</p>
+            </div>
+            
+            <!-- Breadcrumbs -->
+            <div class="flex items-center text-sm mb-8">
+                <a href="index.html" class="text-gray-600 hover:text-gray-800">Home</a>
+                <i data-feather="chevron-right" class="mx-2 text-gray-400 w-4 h-4"></i>
+                <span class="text-gray-800">Products</span>
+            </div>
+            
+            <!-- Filters -->
+            <div class="flex flex-wrap justify-center gap-2 mb-12">
+                <button class="filter-btn px-4 py-2 border border-gray-300 rounded-sm hover:bg-gray-800 hover:text-white transition duration-300 active">All</button>
+                <button class="filter-btn px-4 py-2 border border-gray-300 rounded-sm hover:bg-gray-800 hover:text-white transition duration-300">Home Decor</button>
+                <button class="filter-btn px-4 py-2 border border-gray-300 rounded-sm hover:bg-gray-800 hover:text-white transition duration-300">Tableware</button>
+                <button class="filter-btn px-4 py-2 border border-gray-300 rounded-sm hover:bg-gray-800 hover:text-white transition duration-300">Lighting</button>
+                <button class="filter-btn px-4 py-2 border border-gray-300 rounded-sm hover:bg-gray-800 hover:text-white transition duration-300">Textiles</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Grid -->
+    <section class="py-12 px-6">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Product 1 -->
+                <div class="product-card relative overflow-hidden group">
+                    <img src="http://static.photos/minimal/640x360/1" alt="Classic Vase" class="w-full h-80 object-cover">
+                    <div class="product-overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                        <a href="product-detail.html" class="bg-white text-gray-800 px-6 py-2 rounded-sm">View Details</a>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-xl font-bold">Classic Vase</h3>
+                        <p class="text-gray-600">$145.00</p>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card relative overflow-hidden group">
+                    <img src="http://static.photos/minimal/640x360/2" alt="Marble Tray" class="w-full h-80 object-cover">
+                    <div class="product-overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                        <a href="product-detail.html" class="bg-white text-gray-800 px-6 py-2 rounded-sm">View Details</a>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-xl font-bold">Marble Tray</h3>
+                        <p class="text-gray-600">$89.00</p>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card relative overflow-hidden group">
+                    <img src="http://static.photos/minimal/640x360/3" alt="Brass Candleholder" class="w-full h-80 object-cover">
+                    <div class="product-overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                        <a href="product-detail.html" class="bg-white text-gray-800 px-6 py-2 rounded-sm">View Details</a>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-xl font-bold">Brass Candleholder</h3>
+                        <p class="text-gray-600">$120.00</p>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card relative overflow-hidden group">
+                    <img src="http://static.photos/minimal/640x360/4" alt="Linen Tablecloth" class="w-full h-80 object-cover">
+                    <div class="product-overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                        <a href="product-detail.html" class="bg-white text-gray-800 px-6 py-2 rounded-sm">View Details</a>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-xl font-bold">Linen Tablecloth</h3>
+                        <p class="text-gray-600">$75.00</p>
+                    </div>
+                </div>
+                
+                <!-- Product 5 -->
+                <div class="product-card relative overflow-hidden group">
+                    <img src="http://static.photos/minimal/640x360/5" alt="Ceramic Dinnerware Set" class="w-full h-80 object-cover">
+                    <div class="product-overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                        <a href="product-detail.html" class="bg-white text-gray-800 px-6 py-2 rounded-sm">View Details</a>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-xl font-bold">Ceramic Dinnerware Set</h3>
+                        <p class="text-gray-600">$220.00</p>
+                    </div>
+                </div>
+                
+                <!-- Product 6 -->
+                <div class="product-card relative overflow-hidden group">
+                    <img src="http://static.photos/minimal/640x360/6" alt="Glass Carafe" class="w-full h-80 object-cover">
+                    <div class="product-overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                        <a href="product-detail.html" class="bg-white text-gray-800 px-6 py-2 rounded-sm">View Details</a>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-xl font-bold">Glass Carafe</h3>
+                        <p class="text-gray-600">$65.00</p>
+                    </div>
+                </div>
+                
+                <!-- Product 7 -->
+                <div class="product-card relative overflow-hidden group">
+                    <img src="http://static.photos/minimal/640x360/7" alt="Wooden Serving Board" class="w-full h-80 object-cover">
+                    <div class="product-overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                        <a href="product-detail.html" class="bg-white text-gray-800 px-6 py-2 rounded-sm">View Details</a>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-xl font-bold">Wooden Serving Board</h3>
+                        <p class="text-gray-600">$95.00</p>
+                    </div>
+                </div>
+                
+                <!-- Product 8 -->
+                <div class="product-card relative overflow-hidden group">
+                    <img src="http://static.photos/minimal/640x360/8" alt="Brass Wall Sconce" class="w-full h-80 object-cover">
+                    <div class="product-overlay absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 transition-opacity duration-300">
+                        <a href="product-detail.html" class="bg-white text-gray-800 px-6 py-2 rounded-sm">View Details</a>
+                    </div>
+                    <div class="mt-4">
+                        <h3 class="text-xl font-bold">Brass Wall Sconce</h3>
+                        <p class="text-gray-600">$180.00</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pagination -->
+            <div class="flex justify-center mt-16">
+                <nav class="flex items-center space-x-2">
+                    <a href="#" class="px-4 py-2 border border-gray-300 rounded-sm hover:bg-gray-100">&laquo;</a>
+                    <a href="#" class="px-4 py-2 border border-gray-300 rounded-sm bg-gray-800 text-white">1</a>
+                    <a href="#" class="px-4 py-2 border border-gray-300 rounded-sm hover:bg-gray-100">2</a>
+                    <a href="#" class="px-4 py-2 border border-gray-300 rounded-sm hover:bg-gray-100">3</a>
+                    <a href="#" class="px-4 py-2 border border-gray-300 rounded-sm hover:bg-gray-100">&raquo;</a>
+                </nav>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 px-6 bg-gray-800 text-white">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">Stay Updated</h2>
+            <p class="max-w-2xl mx-auto mb-8">Subscribe to our newsletter for exclusive offers, new arrivals, and design inspiration.</p>
+            <form class="max-w-md mx-auto flex">
+                <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded-l-sm text-gray-800 focus:outline-none">
+                <button type="submit" class="bg-gray-600 px-6 py-3 rounded-r-sm hover:bg-gray-700 transition duration-300">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 bg-gray-900 text-white">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Timeless Elegance</h3>
+                    <p>Crafting enduring designs that transcend trends.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-gray-300 transition duration-300">Home</a></li>
+                        <li><a href="products.html" class="hover:text-gray-300 transition duration-300">Products</a></li>
+                        <li><a href="about.html" class="hover:text-gray-300 transition duration-300">About</a></li>
+                        <li><a href="contact.html" class="hover:text-gray-300 transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Customer Service</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-gray-300 transition duration-300">Shipping</a></li>
+                        <li><a href="#" class="hover:text-gray-300 transition duration-300">Returns</a></li>
+                        <li><a href="#" class="hover:text-gray-300 transition duration-300">FAQ</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-gray-300 transition duration-300"><i data-feather="instagram"></i></a>
+                        <a href="#" class="hover:text-gray-300 transition duration-300"><i data-feather="facebook"></i></a>
+                        <a href="#" class="hover:text-gray-300 transition duration-300"><i data-feather="twitter"></i></a>
+                        <a href="#" class="hover:text-gray-300 transition duration-300"><i data-feather="pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
+                <p>&copy; 2023 Timeless Elegance. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        feather.replace();
+        
+        // Filter functionality
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>
